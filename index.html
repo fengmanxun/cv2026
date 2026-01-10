@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noarchive">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+  </head>
+  <body oncontextmenu="return false;">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      document.addEventListener('keydown', function(event) {
+        if (
+          event.key === 'F12' ||
+          (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'i')) ||
+          (event.metaKey && event.altKey && (event.key === 'I' || event.key === 'i'))
+        ) {
+          event.preventDefault();
+        }
+      });
+
+      const threshold = 160;
+      let devtoolsOpen = false;
+
+      const detectDevTools = () => {
+        if (window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold) {
+          if (!devtoolsOpen) {
+            console.log("Developer tools detected!");
+          }
+          devtoolsOpen = true;
+        } else {
+          if (devtoolsOpen) {
+            console.log("Developer tools closed.");
+          }
+          devtoolsOpen = false;
+        }
+      };
+
+      window.addEventListener('resize', detectDevTools);
+      window.addEventListener('load', detectDevTools);
+
+      setInterval(() => {
+        if (devtoolsOpen) {
+          (function() {}.constructor("debugger").call("action"));
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
