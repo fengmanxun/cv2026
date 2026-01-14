@@ -6,9 +6,8 @@ export interface PersonalInfo {
   phone: string;
   phoneTitle: string;
   wechatqr: string;
-  wechatqrTitle: string;
   wechatid: string;
-  wechatidTitle: string;
+  wechatTitle: string;
   location: string;
   locationTitle: string;
 }

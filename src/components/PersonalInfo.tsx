@@ -21,10 +21,7 @@ const PersonalInfo: React.FC = () => {
           {personalInfo.phoneTitle}: {personalInfo.phone}
           </li>
           <li className="mb-2">
-          {personalInfo.wechatqrTitle}: <a href={`./qr/#${personalInfo.wechatqr}`} target="_blank" rel="noopener noreferrer">{personalInfo.wechatqr}</a>
-          </li>
-          <li className="mb-2">
-          {personalInfo.wechatidTitle}: {personalInfo.wechatid}
+          {personalInfo.wechatTitle}: <a href={`./qr/#${personalInfo.wechatqr}`} target="_blank" rel="noopener noreferrer">{personalInfo.wechatid}</a>
           </li>
           <li className="mb-2">
           {personalInfo.locationTitle}: {personalInfo.location}
