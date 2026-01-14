@@ -26,6 +26,9 @@ const PersonalInfo: React.FC = () => {
           <li className="mb-2">
           {personalInfo.wechatidTitle}: <a href={`https://www.google.com/search?q=${personalInfo.wechatid}`} target="_blank" rel="noopener noreferrer">{personalInfo.wechatid}</a>
           </li>
+          <li className="mb-2">
+          {personalInfo.locationTitle}: <a href={`https://www.google.com/search?q=${personalInfo.location}`} target="_blank" rel="noopener noreferrer">{personalInfo.location}</a>
+          </li>
         </ul>
       </div>
     </section>

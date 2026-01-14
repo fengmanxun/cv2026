@@ -9,6 +9,8 @@ export interface PersonalInfo {
   wechatqrTitle: string;
   wechatid: string;
   wechatidTitle: string;
+  location: string;
+  locationTitle: string;
 }
 
 export interface Experience {
